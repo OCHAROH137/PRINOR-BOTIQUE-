@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRINOR BOUTIQUE - Premium Fashion & Accessories</title>
+    <meta
+      name="description"
+      content="Discover premium fashion, sneakers, shoes, watches, and accessories at PRINOR BOUTIQUE. Quality products with competitive prices in Kenya."
+    />
+    <meta
+      name="keywords"
+      content="fashion, boutique, sneakers, shoes, watches, belts, gowns, Kenya, Nairobi, premium, accessories"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="/placeholder.svg?height=32&width=32" />
+  </head>
+  <body>
+    <!-- Enhanced Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h2>PRINOR BOUTIQUE</h2>
+          <span class="logo-tagline">Premium Fashion & Style</span>
+        </div>
+
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link active">Home</a>
+          <div class="dropdown">
+            <a href="shop.html" class="nav-link dropdown-toggle">
+              Shop <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="sneakers.html">Sneakers</a>
+              <a href="shoes.html">Formal Shoes</a>
+              <a href="clothes.html">Clothing</a>
+              <a href="watches.html">Watches</a>
+              <a href="belts.html">Belts</a>
+              <a href="gowns.html">Gowns</a>
+            </div>
+          </div>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+
+        <div class="nav-actions">
+          <div class="search-container">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search products..."
+              id="searchInput"
+            />
+            <button class="search-btn" id="searchBtn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+
+          <button class="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i>
+          </button>
+
+          <div class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count">0</span>
+            <span class="cart-total">KSh 0</span>
+          </div>
+
+          <div class="hamburger" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Enhanced Hero Section -->
+    <section class="hero">
+      <div class="hero-background"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>
+            Discover Your Perfect <span class="highlight">Style</span> at PRINOR BOUTIQUE
+          </h1>
+          <p>
+            Premium fashion, accessories, and footwear curated for the modern individual. Quality
+            meets affordability in every piece.
+          </p>
+          <div class="hero-buttons">
+            <a href="shop.html" class="cta-button primary">Shop Now</a>
+            <a href="about.html" class="cta-button secondary">Learn More</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Products</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">1000+</span>
+              <span class="stat-label">Happy Customers</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Brands</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="floating-card">
+            <img src="/images/samba.png" alt="Featured Product" />
+            <div class="card-content">
+              <h3>Premium Sneakers</h3>
+              <p>Starting from KSh 6,500</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Categories Section -->
+    <section class="categories">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Shop by Category</h2>
+          <p class="section-subtitle">
+            Explore our carefully curated collection of premium fashion and accessories
+          </p>
+        </div>
+        <div class="category-grid">
+          <div class="category-card" onclick="window.location.href='sneakers.html'">
+            <div class="category-image">
+              <img src="/placeholder.svg?height=250&width=300" alt="Sneakers" />
+              <div class="category-overlay">New Arrivals</div>
+            </div>
+            <div class="category-info">
+              <h3>Premium Sneakers</h3>
+              <p>Latest styles from top brands</p>
+              <div class="price-range">From KSh 6,500</div>
+            </div>
+          </div>
+
+          <div class="category-card" onclick="window.location.href='shoes.html'">
+            <div class="category-image">
+              <img src="/placeholder.svg?height=250&width=300" alt="Formal Shoes" />
+              <div class="category-overlay">Professional</div>
+            </div>
+            <div class="category-info">
+              <h3>Formal Shoes</h3>
+              <p>Professional and elegant footwear</p>
+              <div class="price-range">From KSh 5,500</div>
+            </div>
+          </div>
+
+          <div class="category-card" onclick="window.location.href='clothes.html'">
+            <div class="category-image">
+              <img src="/placeholder.svg?height=250&width=300" alt="Clothing" />
+              <div class="category-overlay">Trending</div>
+            </div>
+            <div class="category-info">
+              <h3>Fashion Clothing</h3>
+              <p>Stylish apparel for every occasion</p>
+              <div class="price-range">From KSh 1,800</div>
+            </div>
+          </div>
+
+          <div class="category-card" onclick="window.location.href='watches.html'">
+            <div class="category-image">
+              <img src="/placeholder.svg?height=250&width=300" alt="Watches" />
+              <div class="category-overlay">Luxury</div>
+            </div>
+            <div class="category-info">
+              <h3>Premium Watches</h3>
+              <p>Timepieces that make a statement</p>
+              <div class="price-range">From KSh 5,500</div>
+            </div>
+          </div>
+
+          <div class="category-card" onclick="window.location.href='belts.html'">
+            <div class="category-image">
+              <img src="/placeholder.svg?height=250&width=300" alt="Belts" />
+              <div class="category-overlay">Essential</div>
+            </div>
+            <div class="category-info">
+              <h3>Designer Belts</h3>
+              <p>Complete your look with style</p>
+              <div class="price-range">From KSh 1,500</div>
+            </div>
+          </div>
+
+          <div class="category-card" onclick="window.location.href='gowns.html'">
+            <div class="category-image">
+              <img src="/placeholder.svg?height=250&width=300" alt="Gowns" />
+              <div class="category-overlay">Elegant</div>
+            </div>
+            <div class="category-info">
+              <h3>Elegant Gowns</h3>
+              <p>Perfect for special occasions</p>
+              <div class="price-range">From KSh 3,800</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Featured Products -->
+    <section class="featured-products">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Featured Products</h2>
+          <p class="section-subtitle">Handpicked favorites from our premium collection</p>
+        </div>
+        <div class="products-grid" id="featuredProducts">
+          <!-- Featured products will be loaded by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Special Offers -->
+    <section class="special-offers">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Special Offers</h2>
+          <p class="section-subtitle">Don't miss out on these amazing deals</p>
+        </div>
+        <div class="offers-grid">
+          <div class="offer-card large">
+            <div class="offer-content">
+              <div class="offer-badge">Limited Time</div>
+              <h3>Up to 40% Off</h3>
+              <p>Premium sneakers and formal shoes. Limited time offer on selected items.</p>
+              <button class="offer-btn" onclick="window.location.href='shoes.html'">
+                Shop Now
+              </button>
+            </div>
+          </div>
+
+          <div class="offer-card">
+            <img src="/placeholder.svg?height=200&width=300" alt="New Arrivals" />
+            <div class="offer-badge new">New</div>
+            <div class="offer-info">
+              <h3>New Arrivals</h3>
+              <p>Latest fashion trends just arrived</p>
+              <button class="offer-btn" onclick="window.location.href='clothes.html'">
+                Explore
+              </button>
+            </div>
+          </div>
+
+          <div class="offer-card">
+            <img src="/placeholder.svg?height=200&width=300" alt="Flash Sale" />
+            <div class="offer-badge sale">Sale</div>
+            <div class="offer-info">
+              <h3>Flash Sale</h3>
+              <p>24-hour deals on premium watches</p>
+              <button class="offer-btn" onclick="window.location.href='watches.html'">
+                Shop Sale
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Newsletter -->
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter-content">
+          <div class="newsletter-text">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to get special offers, free giveaways, and exclusive deals.</p>
+          </div>
+          <div class="newsletter-form">
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email address" />
+              <button onclick="subscribeNewsletter()">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>PRINOR BOUTIQUE</h3>
+            <p>
+              Your premier destination for quality fashion, footwear, and accessories. We bring you
+              the latest trends at unbeatable prices.
+            </p>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Categories</h4>
+            <ul>
+              <li><a href="sneakers.html">Sneakers</a></li>
+              <li><a href="shoes.html">Formal Shoes</a></li>
+              <li><a href="clothes.html">Clothing</a></li>
+              <li><a href="watches.html">Watches</a></li>
+              <li><a href="belts.html">Belts</a></li>
+              <li><a href="gowns.html">Gowns</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Customer Service</h4>
+            <ul>
+              <li><a href="#">Shipping Info</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Size Guide</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 PRINOR BOUTIQUE. All rights reserved. | Designed with ❤️ in Kenya</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Enhanced Product Modal -->
+    <div class="product-modal" id="productModal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div class="modal-body">
+          <!-- Modal content will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Enhanced Cart Sidebar -->
+    <div class="cart-sidebar">
+      <div class="cart-header">
+        <h3>Shopping Cart</h3>
+        <button class="cart-close">&times;</button>
+      </div>
+      <div class="cart-items">
+        <!-- Cart items will be populated by JavaScript -->
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total-section">
+          <div class="total-line">
+            <span>Subtotal:</span>
+            <span>KSh 0</span>
+          </div>
+          <div class="total-line">
+            <span>Shipping:</span>
+            <span>Free</span>
+          </div>
+          <div class="total-line total">
+            <span>Total:</span>
+            <span>KSh 0</span>
+          </div>
+        </div>
+        <button class="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      // Load featured products on homepage
+      document.addEventListener("DOMContentLoaded", function () {
+        const featuredContainer = document.getElementById("featuredProducts");
+        if (featuredContainer) {
+          // Get featured products from different categories
+          const featuredProducts = [
+            productsDatabase.sneakers[0], // Nike Air Force 1
+            productsDatabase.watches[0], // Casio G-Shock
+            productsDatabase.clothes[0], // Premium Polo
+            productsDatabase.gowns[0], // Evening Gown
+            productsDatabase.shoes[0], // Clarks Desert Boot
+            productsDatabase.belts[0], // Leather Belt
+          ];
+
+          featuredContainer.innerHTML = featuredProducts
+            .map((product) => createProductCard(product))
+            .join("");
+
+          // Initialize product cards
+          initializeProductCards();
+        }
+      });
+    </script>
+  </body>
+</html>

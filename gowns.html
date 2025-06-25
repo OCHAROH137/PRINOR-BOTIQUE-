@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gowns - PRINOR BOUTIQUE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>PRINOR BOUTIQUE</h2>
+                <span class="logo-tagline">Premium Fashion</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="shoes.html">Shoes</a>
+                        <a href="sneakers.html">Sneakers</a>
+                        <a href="clothes.html">Clothes</a>
+                        <a href="watches.html">Watches</a>
+                        <a href="belts.html">Belts</a>
+                        <a href="gowns.html" class="active">Gowns</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <div class="search-container">
+                    <input type="text" placeholder="Search gowns..." class="search-input" id="searchInput">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                    <span class="cart-total" id="cartTotal">KES 0</span>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Category Header -->
+    <section class="category-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> > <span>Gowns</span>
+            </div>
+            <h1>Elegant Gowns Collection</h1>
+            <p>Wedding gowns, evening dresses, and formal wear for special occasions</p>
+        </div>
+    </section>
+
+    <!-- Filters and Products -->
+    <section class="shop-content">
+        <div class="container">
+            <div class="shop-layout">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar">
+                    <h3>Filter Gowns</h3>
+                    
+                    <div class="filter-group">
+                        <h4>Occasion</h4>
+                        <div class="filter-options">
+                            <label><input type="checkbox" value="wedding"> Wedding</label>
+                            <label><input type="checkbox" value="evening"> Evening</label>
+                            <label><input type="checkbox" value="cocktail"> Cocktail</label>
+                            <label><input type="checkbox" value="prom"> Prom</label>
+                            <label><input type="checkbox" value="formal"> Formal</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Style</h4>
+                        <div class="filter-options">
+                            <label><input type="checkbox" value="a-line"> A-Line</label>
+                            <label><input type="checkbox" value="mermaid"> Mermaid</label>
+                            <label><input type="checkbox" value="ball-gown"> Ball Gown</label>
+                            <label><input type="checkbox" value="sheath"> Sheath</label>
+                            <label><input type="checkbox" value="empire"> Empire</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <div class="price-range">
+                            <input type="range" min="8000" max="50000" value="25000" class="price-slider" id="priceSlider">
+                            <div class="price-display" id="priceDisplay">KES 8,000 - KES 25,000</div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Size</h4>
+                        <div class="filter-options">
+                            <label><input type="checkbox" value="xs"> XS</label>
+                            <label><input type="checkbox" value="s"> S</label>
+                            <label><input type="checkbox" value="m"> M</label>
+                            <label><input type="checkbox" value="l"> L</label>
+                            <label><input type="checkbox" value="xl"> XL</label>
+                            <label><input type="checkbox" value="xxl"> XXL</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Color</h4>
+                        <div class="color-options">
+                            <div class="color-option" data-color="white" style="background: white;"></div>
+                            <div class="color-option" data-color="ivory" style="background: #FFFFF0;"></div>
+                            <div class="color-option" data-color="black" style="background: black;"></div>
+                            <div class="color-option" data-color="red" style="background: red;"></div>
+                            <div class="color-option" data-color="blue" style="background: blue;"></div>
+                            <div class="color-option" data-color="pink" style="background: pink;"></div>
+                        </div>
+                    </div>
+
+                    <button class="clear-filters">Clear All Filters</button>
+                </aside>
+
+                <!-- Products Main -->
+                <main class="products-main">
+                    <div class="products-header">
+                        <div class="results-info">
+                            <span class="results-count" id="resultsCount">Showing elegant gowns</span>
+                        </div>
+                        <div class="sort-options">
+                            <select class="sort-select" id="sortSelect">
+                                <option value="featured">Featured</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="newest">Newest First</option>
+                                <option value="popular">Most Popular</option>
+                                <option value="rating">Highest Rated</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="brand-sections" id="brandSections">
+                        <!-- Brand sections will be loaded dynamically -->
+                    </div>
+
+                    <div class="pagination" id="pagination">
+                        <!-- Pagination will be loaded dynamically -->
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PRINOR BOUTIQUE</h3>
+                    <p>Your premier destination for fashion and style</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shoes.html">Shoes</a></li>
+                        <li><a href="sneakers.html">Sneakers</a></li>
+                        <li><a href="clothes.html">Clothes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="watches.html">Watches</a></li>
+                        <li><a href="belts.html">Belts</a></li>
+                        <li><a href="gowns.html">Gowns</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PRINOR BOUTIQUE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body">
+                <div class="modal-images">
+                    <div class="main-image">
+                        <img id="modalMainImage" src="/placeholder.svg" alt="">
+                    </div>
+                    <div class="thumbnail-images" id="modalThumbnails">
+                        <!-- Thumbnails will be loaded dynamically -->
+                    </div>
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <div class="modal-rating">
+                        <div class="stars" id="modalStars"></div>
+                        <span id="modalReviews"></span>
+                    </div>
+                    <div class="modal-price">
+                        <span class="current-price" id="modalPrice"></span>
+                        <span class="original-price" id="modalOriginalPrice"></span>
+                    </div>
+                    <p class="modal-description" id="modalDescription"></p>
+                    
+                    <div class="modal-options">
+                        <div class="option-group" id="modalSizes">
+                            <label>Size:</label>
+                            <div class="size-options"></div>
+                        </div>
+                        <div class="option-group" id="modalColors">
+                            <label>Color:</label>
+                            <div class="color-options"></div>
+                        </div>
+                        <div class="option-group">
+                            <label>Quantity:</label>
+                            <div class="quantity-selector">
+                                <button class="qty-btn" onclick="changeModalQuantity(-1)">-</button>
+                                <input type="number" value="1" min="1" class="qty-input" id="modalQuantity">
+                                <button class="qty-btn" onclick="changeModalQuantity(1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button class="add-to-cart-btn" id="modalAddToCart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                        <button class="wishlist-btn" id="modalWishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cartClose">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be loaded dynamically -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total-section">
+                <div class="total-line">
+                    <span>Subtotal:</span>
+                    <span id="cartSubtotal">KES 0</span>
+                </div>
+                <div class="total-line">
+                    <span>Shipping:</span>
+                    <span id="cartShipping">KES 500</span>
+                </div>
+                <div class="total-line total">
+                    <span>Total:</span>
+                    <span id="cartFinalTotal">KES 0</span>
+                </div>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Set current category for filtering
+        window.currentCategory = 'gowns';
+    </script>
+</body>
+</html>
