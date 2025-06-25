@@ -1,2 +1,2 @@
 # PRINOR-BOTIQUE-
-This is a simple website for my botiwue.
+This is a simple website for my botique.
